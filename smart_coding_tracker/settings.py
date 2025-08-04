@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_freamework_simplejwt',
+    'rest_framework_simplejwt',
     'users',
     'logs',
     'goals'
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'smart_coding_tracker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgressql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'codeTrackerDB',
         'USER': 'postgres',
         'PASSWORD': 'admin',
