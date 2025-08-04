@@ -16,8 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.http import JsonResponse
+
+def root_view(request):
+    return JsonResponse({
+        "message": "Smart Coding Tracker API",
+        "endpoints": {
+            "register": "/api/users/register/",
+            "login": "/api/users/token/",
+            "logs": "/api/logs/",
+            "goals": "/api/goals/",
+            }    
+        })
 
 urlpatterns = [
+    path('', root_view, name='root'),
     path('admin/', admin.site.urls),
     # Add your app URLs here
     path('api/users/', include('users.urls')),
