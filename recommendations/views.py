@@ -9,7 +9,7 @@ from collections import Counter
 # Create your views here.
 
 class RecommendationView(APIView):
-    permission_clasees = [IsAuthenticated]
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
         user = request.user
@@ -17,8 +17,8 @@ class RecommendationView(APIView):
         logs = CodingLog.objects.filter(user=user)
 
         # Count topic frequency
-        topic_counts = Counter(log.topic for log in logs)
-        weak_topics = [topic for topic, count in topic_counts.items() if count <= 2]
+        topic_counts = Counter(log.topic for log in logs if log.result.lower() != "solved")
+        weak_topics = [topic for topic, count in topic_counts.items() if count >= 1]
 
         # Get links of attempted problems
         attempted_links = logs.values_list('problem_link', flat=True)
