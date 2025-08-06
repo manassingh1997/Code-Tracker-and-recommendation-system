@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'logs',
     'goals',
     'analytics',
+    'recommendations',
 ]
 
 MIDDLEWARE = [
