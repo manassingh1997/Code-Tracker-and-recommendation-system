@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'users',
     'logs',
-    'goals'
+    'goals',
+    'analytics',
 ]
 
 MIDDLEWARE = [
