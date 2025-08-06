@@ -37,5 +37,5 @@ urlpatterns = [
     path('api/logs/', include('logs.urls')),
     path('api/goals/', include('goals.urls')),
     #path('api/recommendations/', include('recommendations.urls')),
-    ('api/analytics/', include('analytics.urls')),
+    path('api/analytics/', include('analytics.urls')),
 ]
