@@ -1,0 +1,48 @@
+# ------------------------
+# Python / Django
+# ------------------------
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.env
+codeenv/              # <- your Python virtual environment folder
+
+# Django specific
+media/
+staticfiles/
+static/
+
+# VSCode / IDE settings
+.vscode/
+.idea/
+
+# ------------------------
+# Node / React (frontend)
+# ------------------------
+node_modules/
+dist/
+build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Local env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ------------------------
+# OS files
+# ------------------------
+.DS_Store
+Thumbs.db
